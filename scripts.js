@@ -1,3 +1,5 @@
+const displayResults = document.getElementById("display")
+
 function add(num1, num2) {
     return (num1 + num2)
 }
