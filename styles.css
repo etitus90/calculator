@@ -1,0 +1,42 @@
+html, body {
+    background-color: beige;
+    font-size: 24px;
+}
+
+.container {
+    width: 20%;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+#display {
+    text-align: right;
+    width: 100%;
+    background-color: white;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 2em;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding-right: 5px;
+}
+
+button {
+    font-size: inherit;
+    padding: 5px;
+    margin-bottom: 3px;
+}
+
+#clear {
+    width: 50%;
+}
+
+.number, .operator {
+    width: 20%;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
