@@ -1,7 +1,12 @@
 const displayResults = document.getElementById("display")
 const numberBtns = document.querySelectorAll('.number')
+const clearBtn = document.getElementById("clear")
 let storedValue = 0;
 let value = 0;
+
+clearBtn.addEventListener("click", () => {
+    displayResults.textContent = 0;
+})
 
 numberBtns.forEach(btn => btn.addEventListener("click", () => {
     if (displayResults.textContent === "0") {
@@ -11,7 +16,7 @@ numberBtns.forEach(btn => btn.addEventListener("click", () => {
     }
     value = parseInt(displayResults.textContent)
     console.log(value)
-}))
+}));
 
 
 function add(num1, num2) {
