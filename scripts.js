@@ -1,8 +1,15 @@
 const displayResults = document.getElementById("display")
 const numberBtns = document.querySelectorAll('.number')
+let storedValue = 0;
 let value = 0;
+
 numberBtns.forEach(btn => btn.addEventListener("click", () => {
-    value = parseInt(btn.textContent)
+    if (displayResults.textContent === "0") {
+        displayResults.textContent = btn.textContent
+    } else {
+        displayResults.textContent += btn.textContent
+    }
+    value = parseInt(displayResults.textContent)
     console.log(value)
 }))
 
