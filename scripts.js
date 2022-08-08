@@ -1,12 +1,18 @@
 const displayResults = document.getElementById("display")
-const numberBtns = document.querySelectorAll('.number')
+const numberBtns = document.querySelectorAll(".number")
 const clearBtn = document.getElementById("clear")
+const operatorBtns = document.querySelectorAll(".operator")
 let storedValue = 0;
 let value = 0;
+let operator = "";
 
 clearBtn.addEventListener("click", () => {
     displayResults.textContent = 0;
 })
+
+operatorBtns.forEach(btn = btn.addEventListener("click", () => {
+    operator = btn.textContent
+}))
 
 numberBtns.forEach(btn => btn.addEventListener("click", () => {
     if (displayResults.textContent === "0") {
