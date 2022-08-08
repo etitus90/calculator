@@ -31,7 +31,7 @@ button {
     width: 50%;
 }
 
-.number, .operator {
+.number, .operator, #equals {
     width: 20%;
 }
 
