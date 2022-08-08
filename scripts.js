@@ -1,4 +1,11 @@
 const displayResults = document.getElementById("display")
+const numberBtns = document.querySelectorAll('.number')
+let value = 0;
+numberBtns.forEach(btn => btn.addEventListener("click", () => {
+    value = parseInt(btn.textContent)
+    console.log(value)
+}))
+
 
 function add(num1, num2) {
     return (num1 + num2)
