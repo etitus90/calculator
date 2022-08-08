@@ -8,15 +8,7 @@ let value = 0;
 let operator = "";
 
 equalsBtn.addEventListener("click", () => {
-    if (operator === "+") {
-        displayResults.textContent = add(storedValue, value);
-    } else if (operator === "-") {
-        displayResults.textContent = subtract(storedValue, value);
-    } else if (operator === "x") {
-        displayResults.textContent = multiply(storedValue, value);
-    } else if (operator === "/") {
-        displayResults.textContent = divide(storedValue, value);
-    }
+     operate(operator, storedValue, value);
 })
 
 clearBtn.addEventListener("click", () => {
@@ -25,7 +17,7 @@ clearBtn.addEventListener("click", () => {
 
 operatorBtns.forEach(btn => btn.addEventListener("click", () => {
     operator = btn.textContent;
-    storedValue = value;
+    storedValue = parseInt(displayResults.textContent);
     value = 0;
 }));
 
@@ -58,12 +50,12 @@ function divide(num1, num2) {
 
 function operate(operator, num1, num2) {
     if (operator === "+") {
-        add(num1, num2)
+        displayResults.textContent = add(num1, num2);
     } else if (operator === "-") {
-        subtract(num1, num2)
+        displayResults.textContent = subtract(num1, num2);
     } else if (operator === "*") {
-        multiply(num1, num2)
+        displayResults.textContent = multiply(num1, num2)
     } else if (operator === "/") {
-        divide(num1, num2)
+        displayResults.textContent = divide(num1, num2)
     }
 };
